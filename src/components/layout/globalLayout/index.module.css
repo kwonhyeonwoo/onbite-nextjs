@@ -3,12 +3,8 @@
   max-width: 600px;
   min-height: 100vh;
   margin: 0 auto;
-  -webkit-box-shadow: rgba(100, 100, 100, 0.2) 0px 0px 29px 0px;
-          box-shadow: rgba(100, 100, 100, 0.2) 0px 0px 29px 0px;
-  padding: 0px 15px;
 }
 
 .main {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  padding: 0px 15px;
 }
