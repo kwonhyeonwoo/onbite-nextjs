@@ -1,9 +1,7 @@
-import { useRouter } from "next/router"
+import SearchTemplate from "@/components/template/search/SearchTemplate";
 
 export default function Page(){
-    const router = useRouter();
-    const {q} = router.query;
     return (
-        <div>Search {q}</div>
+        <SearchTemplate/>
     )
 }

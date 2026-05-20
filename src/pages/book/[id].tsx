@@ -1,8 +1,6 @@
-import { useRouter } from "next/router"
+import BookDetailTemplate from "@/components/template/bookDetail/BookDetailTemplate"
 export default function Page(){
-    const router = useRouter();
-    const {id} = router.query;
     return (
-        <div>Book {id}</div>
+        <BookDetailTemplate/>
     )
 }
