@@ -11,16 +11,10 @@ const mockData = {
       coverImgUrl:
         "https://shopping-phinf.pstatic.net/main_3888828/38888282618.20230913071643.jpg",
     };
-export default function BookDetailTemplate() {
-    const {
-        id,
-        title,
-        subTitle,
-        description,
-        author,
-        publisher,
-        coverImgUrl
-    } = mockData;
+export default function BookDetailTemplate({ book }:{book:BookData | null}) {
+  if(!book) return "문제가 발생하였습니다."
+  const { id, title, subTitle, description, author, publisher, coverImgUrl } =
+    book;
   return (
     <div className={styles.container}>
       <div

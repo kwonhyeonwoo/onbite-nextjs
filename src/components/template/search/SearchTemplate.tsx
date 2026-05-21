@@ -1,13 +1,13 @@
 import BookItem from "@/components/common/BookItem/BookItem";
 import styles from "./css/index.module.css";
-import book from "@/mock/book.json";
 import SearchBar from "@/components/SearchBar/SearchBar";
-export default function SearchTemplate() {
+
+export default function SearchTemplate({books}:{books:BookData[]}) {
   return (
     <div className={styles.container}>
-        <SearchBar/>
+      <SearchBar />
       <section>
-        {book.map((book) => (
+        {books.map((book) => (
           <BookItem key={book.id} {...book} />
         ))}
       </section>
