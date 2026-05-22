@@ -1,8 +1,9 @@
 import BookItem from "@/components/common/BookItem/BookItem";
 import styles from "./css/index.module.css";
 import SearchBar from "@/components/SearchBar/SearchBar";
+import { BookData } from "@/interfaces/book-types";
 
-export default function SearchTemplate({books}:{books:BookData[]}) {
+export default function SearchTemplate({ books }: { books: BookData[] }) {
   return (
     <div className={styles.container}>
       <SearchBar />

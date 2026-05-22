@@ -1,7 +1,7 @@
 import SearchBar from "@/components/SearchBar/SearchBar";
 import styles from "./css/index.module.css";
-import book from "@/mock/book.json";
 import BookItem from "../../common/BookItem/BookItem";
+import { BookData } from "@/interfaces/book-types";
 
 interface Props {
   allBooks: BookData[];

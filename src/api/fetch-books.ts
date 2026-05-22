@@ -1,6 +1,8 @@
-export default async function fetchBooks(q?:string): Promise<BookData[]> {
+import { BookData } from "@/interfaces/book-types";
+
+export default async function fetchBooks(q?: string): Promise<BookData[]> {
   let url = "http://localhost:12345/book";
-  if(q){
+  if (q) {
     url += `/search?q=${q}`
   }
   try {
@@ -11,7 +13,8 @@ export default async function fetchBooks(q?:string): Promise<BookData[]> {
     const data = await response.json();
     console.log("data", data);
     return data;
-  } catch (error) {
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars
+  } catch (error: unknown) {
     return [];
   }
 }
